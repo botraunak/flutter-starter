@@ -1,4 +1,4 @@
-import 'package:flutter_starter/home/home.dart';
+import 'package:flutter_starter/pages/home/home.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
