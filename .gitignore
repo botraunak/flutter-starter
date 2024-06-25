@@ -44,3 +44,4 @@ app.*.map.json
 
 # IGNORE GENERATED
 *.g.dart
+*.freezed.dart
