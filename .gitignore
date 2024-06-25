@@ -42,6 +42,12 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
+# Firebase project config files
+/android/app/google-services.json
+/ios/Runner/GoogleService-Info.plist
+firebase.json
+lib/firebase_options.dart
+
 # IGNORE GENERATED
 *.g.dart
 *.freezed.dart
