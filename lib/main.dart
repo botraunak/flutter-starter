@@ -1,10 +1,15 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_starter/di/injection.dart';
+import 'package:flutter_starter/firebase_options.dart';
 import 'package:flutter_starter/pages/home/home.dart';
 import 'package:flutter_starter/style/theme.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized(); // Initialize Firebase
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   await setupDependencyGraph();
   runApp(const MyApp());
 }
