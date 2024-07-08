@@ -2,7 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_starter/di/injection.dart';
 import 'package:flutter_starter/firebase_options.dart';
-import 'package:flutter_starter/pages/home/home.dart';
+import 'package:flutter_starter/router/app_router.dart';
 import 'package:flutter_starter/style/theme.dart';
 
 void main() async {
@@ -14,16 +14,22 @@ void main() async {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  final _appRouter = getIt<AppRouter>().getRouter();
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Flutter Demo',
       theme: appTheme,
-      home: const HomePage(),
+      routerConfig: _appRouter,
     );
   }
 }
