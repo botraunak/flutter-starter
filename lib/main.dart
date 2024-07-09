@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_starter/common/constants.dart';
 import 'package:flutter_starter/di/injection.dart';
 import 'package:flutter_starter/firebase_options.dart';
 import 'package:flutter_starter/router/app_router.dart';
@@ -27,7 +28,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Flutter Demo',
+      title: appName,
       theme: appTheme,
       routerConfig: _appRouter,
     );

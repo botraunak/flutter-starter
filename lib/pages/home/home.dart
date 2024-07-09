@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter/common/constants.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -15,7 +16,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Flutter Demo'),
+        title: const Text(appName),
       ),
       body: const Center(
         child: Column(
