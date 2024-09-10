@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_starter/common/constants.dart';
 import 'package:flutter_starter/di/injection.dart';
 import 'package:flutter_starter/firebase_options.dart';
@@ -27,10 +28,13 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: appName,
-      theme: appTheme,
-      routerConfig: _appRouter,
+    return ScreenUtilInit(
+      designSize: const Size(360, 800),
+      child: MaterialApp.router(
+        title: appName,
+        theme: appTheme,
+        routerConfig: _appRouter,
+      ),
     );
   }
 }
